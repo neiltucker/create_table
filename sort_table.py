@@ -6,7 +6,9 @@ employees_df = pd.read_csv('employeestable.csv')       # Use a CSV file for the 
 # employees_df = pd.read_excel('employeestable.xls')   # Use a spreadsheet for the dataframe.
 # employees_df.head()   # Uncomment this line to see the first five rows of the dataframe
 namesort = employees_df.sort_values(['LastName','FirstName'],ascending=True)
-hiredatesort = employees_df.sort_values(['HireDate'],ascending=True)
+hiredatesort = employees_df.sort_values(['HireDate'],ascending=False)
 namesort.head()
 hiredatesort.head()
+print("Sort data by LastName & FirstName columns: \n", namesort)
+print("Sort data by HireDate column: \n", hiredatesort)
 
