@@ -29,8 +29,8 @@ df2_unique_columns = df2.drop_duplicates(subset='SupervisorID',keep='first',inpl
 rows = len(df2)
 total_array = [None] * rows
 for row in range(rows):
-  total_sale = df2['Price'][row] * df2['Quantity'][row] + df2['Freight'][row]
-  total_array[row] = round(total_sale,2)
+  total_sale = df2['Price'][row] * df2['Quantity'][row] + df2['Freight'][row]     # Find the total for a particular row in the dataframe
+  total_array[row] = round(total_sale,2)                                          # Round the value to two decimal places
 
 # Create a new column in the dataframe using the "total" array
 df2['Total'] = total_array
@@ -39,5 +39,7 @@ df2['Total'] = total_array
 df2.groupby('CustomerID')['Total'].sum()                                   
 df2.groupby('SupervisorID')['Total'].sum()
 
+# Export a dataframe to a CSV file
+# df2.to_csv('dataframe_export.csv')
 
 
