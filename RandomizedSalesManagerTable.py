@@ -14,7 +14,7 @@ for package in packages:
     os.system(cmd)
     module = importlib.__import__(package)
 
-rows = 1000000
+rows = 10000
 import random, decimal, string, csv, datetime, numpy as np, pandas as pd
 invoiceid = np.array(range(1000001,2000001))
 customerid = np.array([''.join(random.choice(string.ascii_uppercase) for _ in range(2)) + ''.join(random.choice(string.digits) for _ in range(2)) for _ in range(rows)])
@@ -28,4 +28,4 @@ orderdate = np.array([now - datetime.timedelta(days=(random.randint(360,420))) f
 salesdata = zip(invoiceid,customerid,creditcard,supervisorid,quantity,price,freight,orderdate)
 salesdata1 = list(zip(invoiceid,customerid,creditcard,supervisorid,quantity,price,freight,orderdate))
 df = pd.DataFrame(salesdata1)
-df.to_csv('salesdata.csv',index=False,header=["InvoiceID","CustomerID","CreditCard","supervisorID","Quantity","Price","Freight","OrderDate"])
+df.to_csv('salesdata.csv',index=False,header=["InvoiceID","CustomerID","CreditCard","SupervisorID","Quantity","Price","Freight","OrderDate"])
