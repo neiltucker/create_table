@@ -3,16 +3,7 @@
 # The salesmanagertable2 spreadsheet or CSV file must be in the current directory for this script to work
 import pandas as pd
 df = pd.read_csv('salesmanagertable2.csv')                        # Create a dataframe from a CSV file
-
-# In the df dataframe, create a column that stores the total for each row (Price * Quantity + Freight)                     
-rows = len(df)
-total_array = [None] * rows
-for row in range(rows):
-  total_sale = df['Price'][row] * df['Quantity'][row] + df['Freight'][row]     # Find the total for a particular row in the dataframe
-  total_array[row] = round(total_sale,2)                          # Round the value to two decimal places
-
-df['Total'] = total_array
-df[['Price','Quantity','Freight','Total']].head()
+df[['InvoiceID','Price','Quantity','Freight','Total']].head()
 
 # Sort the data using different criteria and save the dataframes
 labels = ['CustomerID','SupervisorID']
@@ -28,5 +19,6 @@ df.ix[df.duplicated(subset=None,keep='first'),:]                             # R
 df_duplicates = df.ix[df.duplicated(subset=None,keep=False),:]               # Return only rows that are not unique
 df_all = df.drop_duplicates(subset=None,keep='first',inplace=False)          # Remove the duplicate rows
 df_unique = df.drop_duplicates(subset=None,keep=False,inplace=False)         # Remove the duplicate rows and their originals
+
 
 
