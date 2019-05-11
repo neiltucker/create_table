@@ -1,6 +1,6 @@
 # This script will read an excel or csv table into a python dataframe
 # The dataframe will then be sorted by first and lastname
-# The employeestable spreadsheet or CSV file must be in the current directory for this script to work
+# The salesmanagertable spreadsheet or CSV file must be in the current directory for this script to work
 import pandas as pd
 labels = ['CustomerID','SupervisorID']
 df = pd.read_csv('salesmanagertable.csv',index_col=labels)       # Create a dataframe from a CSV file and specify index column(s)
@@ -40,6 +40,10 @@ df2.groupby('CustomerID')['Total'].sum()
 df2.groupby('SupervisorID')['Total'].sum()
 
 # Export a dataframe to a CSV file
-# df2.to_csv('dataframe_export.csv')
+csvfile = 'dataframe_export.csv'
+# df2.to_csv(csvfile)
 
-
+# Verify the file was created
+import os
+os.system('dir dataframe_export.csv')          # Show the details of the newly created CSV file
+os.listdir()                                   # List all the files in the current working directory
