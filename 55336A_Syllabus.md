@@ -6,13 +6,13 @@
 ### Course #: 55336A
 
 ### Number of Days
-5 Days (40 Hours Total)
+5 Days (30 Hours Total)
 
 ### Format
 Instructor-led / Workshop
 
 ### Course Overview
-This comprehensive five-day course provides IT professionals and system administrators with the skills necessary to deploy, manage, and maintain Microsoft Hyper-V virtualization platforms. Through a mix of lectures, demos, and hands-on labs, students will gain proficiency in virtualization concepts, Hyper-V deployment, virtual machine management, advanced networking and storage configurations, and automation using PowerShell. This course is designed for environments running Windows Server.
+This comprehensive five-day course provides IT professionals and system administrators with the skills necessary to deploy, manage, and maintain Microsoft Hyper-V virtualization platforms. Through a mix of lectures, demos, and hands-on labs, students will gain proficiency in virtualization concepts, Hyper-V deployment, virtual machine management, advanced networking and storage configurations, and automation using PowerShell. This course is designed for environments running Windows Server 2022 or newer.
 
 ### Course Audience
 - IT Professionals
